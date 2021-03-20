@@ -8,10 +8,10 @@
 </template>
 
 <script>
-import Navbar from "./components/Navbar";
-import Header from "./components/Header";
-import Gallery from "./components/Gallery";
-import Footer from "./components/Footer";
+import Navbar from "@/components/Navbar";
+import Header from "@/components/Header";
+import Gallery from "@/components/Gallery";
+import Footer from "@/components/Footer";
 export default {
   components:{
     Navbar,
