@@ -17,13 +17,13 @@
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item active">
-          <router-link to="/photos" class="nav-link">Photos</router-link>
+          <router-link to="/photos" class="nav-link">Photo</router-link>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled" href="#">Videos</a>
+          <a class="nav-link disabled" href="#">Video</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled" href="#">Vectors</a>
+          <a class="nav-link disabled" href="#">Vector</a>
         </li>
       </ul>
     </div>

@@ -24,7 +24,7 @@
             <router-link to="/">Home</router-link>
           </li>
           <li class="breadcrumb-item active" aria-current="page">
-            <router-link to="/photos">Photos</router-link>
+            <router-link to="/photos">Photo</router-link>
           </li>
         </ol>
       </nav>
@@ -42,9 +42,9 @@ export default {
 
   methods: {
     Keyword() {
-      if(this.search == ""){
+      if (this.search == "") {
         this.$store.dispatch("getPhoto");
-      }else{
+      } else {
         this.$store.dispatch("getSearch", this.search);
       }
     },

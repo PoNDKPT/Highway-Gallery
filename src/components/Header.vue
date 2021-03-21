@@ -20,7 +20,7 @@
           by our talented community.</span
         >
       </div>
-      <div class="input-group">
+      <form class="input-group">
         <input
           type="text"
           class="form-control"
@@ -29,11 +29,11 @@
           lazy
         />
         <div class="input-group-append">
-          <button class="btn btn-warning">
+          <button class="btn btn-warning" @click.stop.prevent="submit()">
             <i class="fas fa-search"></i>
           </button>
         </div>
-      </div>
+      </form>
       <a href="#galley"><i class="fas fa-arrow-down btn-custom"></i></a>
     </div>
   </div>
@@ -46,6 +46,16 @@ export default {
       search: "",
       videoClass: "vdoClass",
     };
+  },
+  methods: {
+    submit() {
+      if(this.search == ""){
+        this.$store.dispatch("getPhoto");
+      }else{
+        this.$store.dispatch("getSearch", this.search);
+      }
+      this.$router.push("/photos");
+    },
   },
 };
 </script>
