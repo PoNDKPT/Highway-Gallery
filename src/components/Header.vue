@@ -26,6 +26,7 @@
           class="form-control"
           placeholder="Search images"
           v-model="search"
+          lazy
         />
         <div class="input-group-append">
           <button class="btn btn-warning">
@@ -50,7 +51,7 @@ export default {
 </script>
 
 <style>
-  .vdoClass{
-    filter: blur(2px);
-  }
+.vdoClass {
+  filter: blur(2px);
+}
 </style>

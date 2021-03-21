@@ -1,5 +1,5 @@
 <template>
-  <div class="custom-container">
+  <div class="custom-container" id="gellery">
     <stack
       :column-min-width="300"
       :gutter-width="15"
@@ -8,12 +8,15 @@
       class="stack"
     >
       <stack-item
-        
-        v-for="(image, i) in images"
+        v-for="(image, i) in allImage"
         :key="i"
         style="transition: transform 300ms"
       >
-        <img :class="styleClass" :src="image.urls.small" :alt="image.alt_description" />
+        <img
+          :class="styleClass"
+          :src="image.urls.small"
+          :alt="image.alt_description"
+        />
         <div class="img-footer">
           <img class="avatar" :src="image.user.profile_image.large" alt="" />
           <div class="info">
@@ -29,27 +32,24 @@
 </template>
 
 <script>
-import axios from "axios";
 import { Stack, StackItem } from "vue-stack-grid";
 export default {
   data() {
     return {
-      images: [],
       styleClass: "classStack",
     };
   },
+  computed: {
+    allImage() {
+      if (this.$store.getters.searchImage == null) {
+        return this.$store.getters.allImage;
+      } else {
+        return this.$store.getters.searchImage.results;
+      }
+    },
+  },
   mounted() {
-    axios
-      .get(
-        `https://api.unsplash.com/photos/?client_id=MTNcHBiwJl1DewakSTL6sNA2KmtlZ77ggYJvlB4S6SM`
-      )
-      .then((response) => {
-        console.log(response);
-        this.images = response.data;
-      })
-      .catch(() => {
-        this.images = [];
-      });
+    this.$store.dispatch("getPhoto");
   },
 
   components: {
