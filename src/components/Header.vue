@@ -34,7 +34,7 @@
           </button>
         </div>
       </form>
-      <a href="#galley"><i class="fas fa-arrow-down btn-custom"></i></a>
+      <!-- <a href="#galley"><i class="fas fa-arrow-down btn-custom"></i></a> -->
     </div>
   </div>
 </template>
