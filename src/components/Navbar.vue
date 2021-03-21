@@ -20,10 +20,10 @@
           <router-link to="/photos" class="nav-link">Photos</router-link>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Videos</a>
+          <a class="nav-link disabled" href="#">Videos</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Vectors</a>
+          <a class="nav-link disabled" href="#">Vectors</a>
         </li>
       </ul>
     </div>
