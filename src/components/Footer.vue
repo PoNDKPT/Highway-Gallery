@@ -1,6 +1,6 @@
 <template>
   <div class="footer">
-      <span>COPYRIGHT © 2018 HIGHWAY | GALLERY</span>
+      <span>COPYRIGHT © 2021 HIGHWAY | GALLERY</span>
   </div>
 </template>
 
