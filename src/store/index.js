@@ -25,8 +25,8 @@ export default new Vuex.Store({
   },
 
   actions: {
-    getPhoto({ commit }) {
-      axios
+    async getPhoto({ commit }) {
+      await axios
         .get(
           `https://api.unsplash.com/photos/?client_id=MTNcHBiwJl1DewakSTL6sNA2KmtlZ77ggYJvlB4S6SM&per_page=20`
         )
@@ -35,8 +35,8 @@ export default new Vuex.Store({
         });
     },
 
-    getSearch({ commit }, topic) {
-      axios
+    async getSearch({ commit }, topic) {
+      await axios
         .get(
           `https://api.unsplash.com/search/photos?client_id=MTNcHBiwJl1DewakSTL6sNA2KmtlZ77ggYJvlB4S6SM&query=${topic}&per_page=20`
         )
