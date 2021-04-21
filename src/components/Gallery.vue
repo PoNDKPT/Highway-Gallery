@@ -66,7 +66,7 @@ export default {
 }
 
 .custom-container {
-  width: 70vw;
+  width: 80vw;
   margin: 0 auto;
   padding-top: 20px;
 }
